@@ -7,7 +7,7 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add("hidden");
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY,loginInput.value);
   paintGreetings();
 }
@@ -26,5 +26,6 @@ if (savedUsername === null){
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   // show the greetings
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   paintGreetings();
 }
